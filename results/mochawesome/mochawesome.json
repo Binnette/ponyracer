@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-07-06T21:50:40.065Z",
+    "end": "2022-07-06T21:50:40.981Z",
+    "duration": 916,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "28828fed-9cce-4970-8e4e-cab873af45ac",
+      "title": "",
+      "fullFile": "cypress/e2e/home.cy.ts",
+      "file": "cypress/e2e/home.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "99b2781f-f050-426c-82c2-eaac4f85bf62",
+          "title": "Ponyracer",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should display title on home page",
+              "fullTitle": "Ponyracer should display title on home page",
+              "timedOut": null,
+              "duration": 884,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.contains('h1', 'Ponyracer');",
+              "err": {},
+              "uuid": "8ab9d714-fee1-4591-9f6c-bd3ef4aa7cce",
+              "parentUUID": "99b2781f-f050-426c-82c2-eaac4f85bf62",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8ab9d714-fee1-4591-9f6c-bd3ef4aa7cce"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 884,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

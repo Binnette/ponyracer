@@ -132,7 +132,7 @@
           "builder": "@cypress/schematic:cypress",
           "options": {
             "devServerTarget": "ponyracer:serve:e2e",
-            "browser": "chrome",
+            "browser": "chromium",
             "baseUrl": "http://localhost:4201",
             "watch": true,
             "headless": false,
