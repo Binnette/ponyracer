@@ -29,7 +29,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": ["chart.js"]
           },
           "configurations": {
             "production": {
@@ -72,6 +73,11 @@
             },
             "development": {
               "browserTarget": "ponyracer:build:development"
+            },
+            "e2e": {
+              "browserTarget": "ponyracer:build:development",
+              "port": 4201,
+              "liveReload": false
             }
           },
           "defaultConfiguration": "development"
@@ -89,6 +95,11 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
+            "codeCoverageExclude": [
+              "**/models/*.ts",
+              "**/app.module.ts",
+              "**/app.routes.ts"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -120,9 +131,12 @@
         "e2e": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "ponyracer:serve",
+            "devServerTarget": "ponyracer:serve:e2e",
+            "browser": "chrome",
+            "baseUrl": "http://localhost:4201",
             "watch": true,
-            "headless": false
+            "headless": false,
+            "e2e": true
           },
           "configurations": {
             "production": {
@@ -135,8 +149,10 @@
           "options": {
             "lintFilePatterns": [
               "src/**/*.ts",
-              "src/**/*.html"
-            ]
+              "src/**/*.html",
+              "cypress/**/*.ts"
+            ],
+            "maxWarnings": 0
           }
         }
       }
