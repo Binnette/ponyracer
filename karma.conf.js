@@ -31,11 +31,7 @@ module.exports = function (config) {
     coverageReporter: {
       dir: require('path').join(__dirname, './coverage/ponyracer'),
       subdir: '.',
-      reporters: [
-        { type: 'html' },
-        { type: 'json-summary' },
-        { type: 'text-summary' }
-      ]
+      reporters: [{ type: 'html' }, { type: 'json-summary' }, { type: 'text-summary' }]
     },
     jsonReporter: {
       stdout: false,

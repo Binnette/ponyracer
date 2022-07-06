@@ -7,13 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "lint": "ng lint",
     "e2e": "ng e2e",
     "ng2ninja": "ng2ninja",
     "format": "prettier --write \"{src,cypress}/**/*.+(ts|js|json|html|css)\"",
-    "postinstall": "npm run format",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
-    "lint": "ng lint"
+    "postinstall": "npm run format"
   },
   "private": true,
   "dependencies": {
