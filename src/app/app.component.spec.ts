@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -7,7 +8,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
-    }).compileComponents();
+    })
   });
 
   it('should create the app', () => {
@@ -22,10 +23,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('ponyracer');
   });
 
-  it('should render title', () => {
+  it('should have a title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ponyracer app is running!');
+    const element = fixture.nativeElement;
+    expect(element.querySelector('h1').textContent).withContext('You should have an `h1` with the text Ponyracer').toContain('Ponyracer');
   });
 });
